@@ -4,14 +4,16 @@
  */
 package login;
 
+import java.awt.BorderLayout;
 import java.awt.Color;
+import javax.swing.JPanel;
 
 /**
  *
  * @author JUAN JOSE
  */
 public class Login extends javax.swing.JFrame {
-    int Xmouse, Ymouse;
+    public int Xmouse, Ymouse;
     String   Admin_user,admin_contra,vend_user,vend_contra,bode_user,bode_contra; 
     /**
      * Creates new form Login
@@ -27,6 +29,7 @@ public class Login extends javax.swing.JFrame {
         vend_contra="123";
         bode_user ="bode";
         bode_contra ="123";
+     
        
          
                 
@@ -66,13 +69,14 @@ public class Login extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(204, 0, 204));
         setLocation(new java.awt.Point(225, 225));
-        setMaximumSize(new java.awt.Dimension(800, 500));
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(800, 500));
         setResizable(false);
 
         LOG.setBackground(new java.awt.Color(255, 255, 255));
         LOG.setForeground(new java.awt.Color(242, 242, 242));
+        LOG.setMaximumSize(new java.awt.Dimension(800, 500));
+        LOG.setMinimumSize(new java.awt.Dimension(880, 500));
+        LOG.setPreferredSize(new java.awt.Dimension(880, 500));
         LOG.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Contraseña.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -271,8 +275,25 @@ public class Login extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    private void ShowPanel(JPanel p){
+        
+        p.setSize(800,500);
+       
+                     
+        LOG.removeAll();
+        LOG.revalidate();
+        LOG.repaint();
+        LOG.add(p);
+        LOG.repaint();
+    
+    }
+    
+    
+    
+    
     private void Text_USERActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Text_USERActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Text_USERActionPerformed
@@ -345,15 +366,8 @@ public class Login extends javax.swing.JFrame {
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
              if (options.getSelectedItem().equals("Administrador")){
                  if ((Text_USER.getText().equals(Admin_user))&&(String.valueOf(CONTRASEÑA.getPassword()).equals(admin_contra)) ){
-                     
-                     ADMI admi = new ADMI();
-                     admi.setSize(800,500);
-                     admi.setLocation(225,225);
-                     
-                     LOG.removeAll();
-                     LOG.revalidate();
-                     LOG.repaint();
-                     
+                         Admin admi= new Admin();
+                         ShowPanel(admi);
                  }else{
                      
                      if ((Text_USER.getText().equals("Username"))&&(String.valueOf(CONTRASEÑA.getPassword()).equals("*********")) ){
@@ -365,8 +379,8 @@ public class Login extends javax.swing.JFrame {
              }
              if (options.getSelectedItem().equals("Vendedora")){
                   if ((Text_USER.getText().equals(vend_user))&&(String.valueOf(CONTRASEÑA.getPassword()).equals(vend_contra)) ){
-                     
-                     System.out.println("how");
+                     Vend vend= new Vend();
+                     ShowPanel(vend);
                      
                  }else{
                      
@@ -379,8 +393,9 @@ public class Login extends javax.swing.JFrame {
              }
              if (options.getSelectedItem().equals("Bodeguero")){
                   if ((Text_USER.getText().equals(bode_user))&&(String.valueOf(CONTRASEÑA.getPassword()).equals(bode_contra)) ){
-                     
-                     System.out.println("are");
+                     Bode bode= new Bode();
+                     ShowPanel(bode);
+                  
                      
                  }else{
                      
