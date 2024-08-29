@@ -48,6 +48,8 @@ public class Admin extends javax.swing.JPanel {
         jPanel12 = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
 
         ADM.setBackground(new java.awt.Color(255, 255, 255));
         ADM.setMaximumSize(new java.awt.Dimension(800, 500));
@@ -346,6 +348,23 @@ public class Admin extends javax.swing.JPanel {
 
         ADM.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 0, 260, 500));
 
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 660, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 460, Short.MAX_VALUE)
+        );
+
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 660, 460));
+
+        ADM.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 40, 660, 460));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -399,19 +418,19 @@ public class Admin extends javax.swing.JPanel {
     }//GEN-LAST:event_jPanel4MouseMoved
 
     private void jPanel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel8MouseClicked
-        jPanel10.setVisible(true);
+        jPanel13.setVisible(true);
     }//GEN-LAST:event_jPanel8MouseClicked
 
     private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
-        jPanel10.setVisible(true);
+        jPanel13.setVisible(true);
     }//GEN-LAST:event_jLabel9MouseClicked
 
     private void jPanel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel9MouseClicked
-        jPanel10.setVisible(false);
+        jPanel13.setVisible(false);
     }//GEN-LAST:event_jPanel9MouseClicked
 
     private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked
-        jPanel10.setVisible(false);
+        jPanel13.setVisible(false);
     }//GEN-LAST:event_jLabel10MouseClicked
 
 
@@ -429,8 +448,10 @@ public class Admin extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
