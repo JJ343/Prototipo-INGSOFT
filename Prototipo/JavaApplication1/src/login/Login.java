@@ -4,37 +4,19 @@
  */
 package login;
 
-import java.awt.BorderLayout;
 import java.awt.Color;
-import javax.swing.JPanel;
 
 /**
  *
  * @author JUAN JOSE
  */
 public class Login extends javax.swing.JFrame {
-    public int Xmouse, Ymouse;
-    String   Admin_user,admin_contra,vend_user,vend_contra,bode_user,bode_contra; 
+    int Xmouse, Ymouse;
     /**
      * Creates new form Login
      */
     public Login() {
         initComponents();
-        
-        LOG.setSize(800,500);
-        LOG.setLocation(500,500);
-        Admin_user ="admin";
-        admin_contra ="123";
-        vend_user ="vend";
-        vend_contra="123";
-        bode_user ="bode";
-        bode_contra ="123";
-     
-       
-         
-                
-    
-   
     }
     
     
@@ -48,7 +30,7 @@ public class Login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        LOG = new javax.swing.JPanel();
+        jPanel5 = new javax.swing.JPanel();
         Contraseña = new javax.swing.JLabel();
         Nombre1 = new javax.swing.JLabel();
         Nombre2 = new javax.swing.JLabel();
@@ -64,42 +46,37 @@ public class Login extends javax.swing.JFrame {
         Boton_cerrado = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        options = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(204, 0, 204));
-        setLocation(new java.awt.Point(225, 225));
         setUndecorated(true);
         setResizable(false);
 
-        LOG.setBackground(new java.awt.Color(255, 255, 255));
-        LOG.setForeground(new java.awt.Color(242, 242, 242));
-        LOG.setMaximumSize(new java.awt.Dimension(800, 500));
-        LOG.setMinimumSize(new java.awt.Dimension(880, 500));
-        LOG.setPreferredSize(new java.awt.Dimension(880, 500));
-        LOG.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel5.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel5.setForeground(new java.awt.Color(242, 242, 242));
+        jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Contraseña.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         Contraseña.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Contraseña.setText("CONTRASEÑA");
-        LOG.add(Contraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, 200, 70));
+        jPanel5.add(Contraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, 200, 70));
 
         Nombre1.setFont(new java.awt.Font("Stencil", 0, 24)); // NOI18N
         Nombre1.setForeground(new java.awt.Color(242, 242, 242));
         Nombre1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Nombre1.setText("MINIPRECIO");
-        LOG.add(Nombre1, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 230, 150, 70));
+        jPanel5.add(Nombre1, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 220, 150, 70));
 
         Nombre2.setFont(new java.awt.Font("Stencil", 0, 24)); // NOI18N
         Nombre2.setForeground(new java.awt.Color(242, 242, 242));
         Nombre2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Nombre2.setText("SURTICONFITES");
-        LOG.add(Nombre2, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 200, 200, 70));
+        jPanel5.add(Nombre2, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 200, 200, 70));
 
         Nombre_2.setForeground(new java.awt.Color(245, 245, 245));
         Nombre_2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/WhatsApp Image 2024-08-27 at 9.58.55 PM.jpeg"))); // NOI18N
         Nombre_2.setText("HOLAAAAAAAAAAAAAAAAAA");
-        LOG.add(Nombre_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, -60, 340, 610));
+        jPanel5.add(Nombre_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, -60, 340, 610));
 
         CONTRASEÑA.setForeground(new java.awt.Color(204, 204, 204));
         CONTRASEÑA.setText("*********");
@@ -115,15 +92,15 @@ public class Login extends javax.swing.JFrame {
                 CONTRASEÑAActionPerformed(evt);
             }
         });
-        LOG.add(CONTRASEÑA, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 360, 400, 30));
+        jPanel5.add(CONTRASEÑA, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 360, 440, 30));
 
         Nombre3.setFont(new java.awt.Font("Stencil", 0, 24)); // NOI18N
         Nombre3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Nombre3.setText("INICIAR SESION");
-        LOG.add(Nombre3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, 200, 70));
+        jPanel5.add(Nombre3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, 200, 70));
 
         jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
-        LOG.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 390, 400, 50));
+        jPanel5.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 390, 440, 50));
 
         Usuario1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         Usuario1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -133,7 +110,7 @@ public class Login extends javax.swing.JFrame {
                 Usuario1MousePressed(evt);
             }
         });
-        LOG.add(Usuario1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 170, 200, 70));
+        jPanel5.add(Usuario1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 170, 200, 70));
 
         Text_USER.setForeground(new java.awt.Color(204, 204, 204));
         Text_USER.setText("Username");
@@ -148,10 +125,10 @@ public class Login extends javax.swing.JFrame {
                 Text_USERActionPerformed(evt);
             }
         });
-        LOG.add(Text_USER, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 220, 390, 40));
+        jPanel5.add(Text_USER, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 220, 440, 40));
 
         jSeparator2.setForeground(new java.awt.Color(0, 0, 0));
-        LOG.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 260, 390, 50));
+        jPanel5.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 260, 440, 50));
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -190,9 +167,7 @@ public class Login extends javax.swing.JFrame {
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addComponent(Boton_cerrado, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(Boton_cerrado, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -207,17 +182,17 @@ public class Login extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 846, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(9, Short.MAX_VALUE)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
-        LOG.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -20, 880, 60));
+        jPanel5.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -20, 880, 60));
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));
         jPanel1.setToolTipText("");
@@ -226,74 +201,42 @@ public class Login extends javax.swing.JFrame {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("ENTRAR");
         jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel1MouseClicked(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(33, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(33, 33, 33))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addGap(0, 15, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(10, 10, 10))
         );
 
-        LOG.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 440, 120, 40));
-
-        options.setForeground(new java.awt.Color(255, 255, 255));
-        options.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Administrador", "Vendedora", "Bodeguero" }));
-        options.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        options.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                optionsActionPerformed(evt);
-            }
-        });
-        LOG.add(options, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 70, -1, -1));
+        jPanel5.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 440, 120, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(LOG, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(LOG, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, 518, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
         pack();
-        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void ShowPanel(JPanel p){
-        
-        p.setSize(800,500);
-       
-                     
-        LOG.removeAll();
-        LOG.revalidate();
-        LOG.repaint();
-        LOG.add(p);
-        LOG.repaint();
-    
-    }
-    
-    
-    
-    
     private void Text_USERActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Text_USERActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Text_USERActionPerformed
@@ -359,56 +302,6 @@ public class Login extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_Text_USERMousePressed
 
-    private void optionsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_optionsActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_optionsActionPerformed
-
-    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
-             if (options.getSelectedItem().equals("Administrador")){
-                 if ((Text_USER.getText().equals(Admin_user))&&(String.valueOf(CONTRASEÑA.getPassword()).equals(admin_contra)) ){
-                         Admin admi= new Admin();
-                         ShowPanel(admi);
-                 }else{
-                     
-                     if ((Text_USER.getText().equals("Username"))&&(String.valueOf(CONTRASEÑA.getPassword()).equals("*********")) ){
-                        javax.swing.JOptionPane.showMessageDialog(this,"Porfavor llene los datos");
-                     }else{
-                         javax.swing.JOptionPane.showMessageDialog(this,"El usuario o contraseña utilizados no se encuentran registrados");   
-                     }    
-                 }
-             }
-             if (options.getSelectedItem().equals("Vendedora")){
-                  if ((Text_USER.getText().equals(vend_user))&&(String.valueOf(CONTRASEÑA.getPassword()).equals(vend_contra)) ){
-                     Vend vend= new Vend();
-                     ShowPanel(vend);
-                     
-                 }else{
-                     
-                     if ((Text_USER.getText().equals("Username"))&&(String.valueOf(CONTRASEÑA.getPassword()).equals("*********")) ){
-                        javax.swing.JOptionPane.showMessageDialog(this,"Porfavor llene los datos");
-                     }else{
-                         javax.swing.JOptionPane.showMessageDialog(this,"El usuario o contraseña utilizados no se encuentran registrados");   
-                     }    
-                 }
-             }
-             if (options.getSelectedItem().equals("Bodeguero")){
-                  if ((Text_USER.getText().equals(bode_user))&&(String.valueOf(CONTRASEÑA.getPassword()).equals(bode_contra)) ){
-                     Bode bode= new Bode();
-                     ShowPanel(bode);
-                  
-                     
-                 }else{
-                     
-                     if ((Text_USER.getText().equals("Username"))&&(String.valueOf(CONTRASEÑA.getPassword()).equals("*********")) ){
-                        javax.swing.JOptionPane.showMessageDialog(this,"Porfavor llene los datos");
-                     }else{
-                         javax.swing.JOptionPane.showMessageDialog(this,"El usuario o contraseña utilizados no se encuentran registrados");   
-                     }    
-                 }
-             }
-              
-    }//GEN-LAST:event_jLabel1MouseClicked
-
     /**
      * @param args the command line arguments
      */
@@ -448,7 +341,6 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel Boton_cerrado;
     private javax.swing.JPasswordField CONTRASEÑA;
     private javax.swing.JLabel Contraseña;
-    private javax.swing.JPanel LOG;
     private javax.swing.JLabel Nombre1;
     private javax.swing.JLabel Nombre2;
     private javax.swing.JLabel Nombre3;
@@ -459,8 +351,8 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel5;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
-    private javax.swing.JComboBox<String> options;
     // End of variables declaration//GEN-END:variables
 }
