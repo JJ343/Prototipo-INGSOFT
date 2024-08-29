@@ -4,6 +4,8 @@
  */
 package login;
 
+import javax.swing.JPanel;
+
 /**
  *
  * @author JUAN JOSE
@@ -417,20 +419,37 @@ public class Admin extends javax.swing.JPanel {
 
     }//GEN-LAST:event_jPanel4MouseMoved
 
+    private void ShowPanel(JPanel p){
+        
+        p.setSize(660,460);
+       
+                     
+        jPanel2.removeAll();
+        jPanel2.revalidate();
+        jPanel2.repaint();
+        jPanel2.add(p);
+        jPanel2.repaint();
+    
+    }
+    
+    
     private void jPanel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel8MouseClicked
-        jPanel13.setVisible(true);
+        IngresarCliente ingclient = new IngresarCliente();
+        ShowPanel(ingclient);
+        
     }//GEN-LAST:event_jPanel8MouseClicked
 
     private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
-        jPanel13.setVisible(true);
+                IngresarCliente ingclient = new IngresarCliente();
+                ShowPanel(ingclient);
     }//GEN-LAST:event_jLabel9MouseClicked
 
     private void jPanel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel9MouseClicked
-        jPanel13.setVisible(false);
+        
     }//GEN-LAST:event_jPanel9MouseClicked
 
     private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked
-        jPanel13.setVisible(false);
+        
     }//GEN-LAST:event_jLabel10MouseClicked
 
 
