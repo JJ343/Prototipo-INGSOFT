@@ -5,6 +5,7 @@
 package login;
 
 import java.awt.Color;
+import javax.swing.JPanel;
 
 /**
  *
@@ -117,12 +118,12 @@ public class Vend extends javax.swing.JPanel {
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 850, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(9, Short.MAX_VALUE)
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -233,6 +234,11 @@ public class Vend extends javax.swing.JPanel {
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel9.setText("Ingresar Clientes");
         jLabel9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel9MouseClicked(evt);
+            }
+        });
 
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/17004.png"))); // NOI18N
 
@@ -463,6 +469,24 @@ public class Vend extends javax.swing.JPanel {
     private void jPanel12MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel12MouseExited
         jPanel12.setBackground(new Color(102,255,102));
     }//GEN-LAST:event_jPanel12MouseExited
+
+        private void ShowPanel(JPanel p){
+        
+        p.setSize(660,460);
+       
+                     
+        jPanel10.removeAll();
+        jPanel10.revalidate();
+        jPanel10.repaint();
+        jPanel10.add(p);
+        jPanel10.repaint();
+    
+    }
+    
+    private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
+                IngresarCliente ingclient = new IngresarCliente();
+                ShowPanel(ingclient);
+    }//GEN-LAST:event_jLabel9MouseClicked
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
