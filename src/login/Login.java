@@ -6,7 +6,11 @@ package login;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.util.ArrayList;
+import java.util.List;
 import javax.swing.JPanel;
+import login.Main.Usuario;
+
 
 /**
  *
@@ -14,28 +18,31 @@ import javax.swing.JPanel;
  */
 public class Login extends javax.swing.JFrame {
     public int Xmouse, Ymouse;
-    String   Admin_user,admin_contra,vend_user,vend_contra,bode_user,bode_contra; 
-    /**
-     * Creates new form Login
-     */
+    public int xd;
+    List<Main.Usuario> usuarios = new ArrayList<>();
+    
+    
     public Login() {
         initComponents();
         
         LOG.setSize(800,500);
         LOG.setLocation(500,500);
-        Admin_user ="admin";
-        admin_contra ="123";
-        vend_user ="vend";
-        vend_contra="123";
-        bode_user ="bode";
-        bode_contra ="123";
-     
-       
-         
-                
-    
+        BaseDeDatos.agregarUsuario(new Usuario("admin","123","Administrador"));
+        BaseDeDatos.agregarUsuario(new Usuario("vend","123","Vendedora"));
+        BaseDeDatos.agregarUsuario(new Usuario("bode","123","Bodeguero"));
+        Botoncerrarsesion.setEnabled(false);
+        Botoncerrarsesion.setVisible(false);
+        
    
     }
+    
+
+
+       
+        
+    
+    
+    
     
     
 
@@ -49,125 +56,58 @@ public class Login extends javax.swing.JFrame {
     private void initComponents() {
 
         LOG = new javax.swing.JPanel();
-        Contraseña = new javax.swing.JLabel();
-        Nombre1 = new javax.swing.JLabel();
-        Nombre2 = new javax.swing.JLabel();
-        Nombre_2 = new javax.swing.JLabel();
-        CONTRASEÑA = new javax.swing.JPasswordField();
-        Nombre3 = new javax.swing.JLabel();
-        jSeparator1 = new javax.swing.JSeparator();
-        Usuario1 = new javax.swing.JLabel();
-        Text_USER = new javax.swing.JTextField();
-        jSeparator2 = new javax.swing.JSeparator();
-        jPanel2 = new javax.swing.JPanel();
-        jPanel3 = new javax.swing.JPanel();
+        Barrita = new javax.swing.JPanel();
+        Botonexit = new javax.swing.JPanel();
         Boton_cerrado = new javax.swing.JLabel();
+        Botoncerrarsesion = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        Pantalla = new javax.swing.JPanel();
+        Nombre2 = new javax.swing.JLabel();
+        Nombre1 = new javax.swing.JLabel();
+        Text_USER = new javax.swing.JTextField();
+        options = new javax.swing.JComboBox<>();
+        Nombre_2 = new javax.swing.JLabel();
+        Nombre3 = new javax.swing.JLabel();
+        Usuario1 = new javax.swing.JLabel();
+        jSeparator2 = new javax.swing.JSeparator();
+        CONTRASEÑA = new javax.swing.JPasswordField();
+        Contraseña = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        options = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBackground(new java.awt.Color(204, 0, 204));
+        setBackground(new java.awt.Color(255, 255, 255));
         setLocation(new java.awt.Point(225, 225));
+        setMinimumSize(new java.awt.Dimension(880, 506));
         setUndecorated(true);
         setResizable(false);
+        setSize(new java.awt.Dimension(880, 506));
 
         LOG.setBackground(new java.awt.Color(255, 255, 255));
         LOG.setForeground(new java.awt.Color(242, 242, 242));
-        LOG.setMaximumSize(new java.awt.Dimension(800, 500));
-        LOG.setMinimumSize(new java.awt.Dimension(880, 500));
-        LOG.setPreferredSize(new java.awt.Dimension(880, 500));
+        LOG.setMaximumSize(new java.awt.Dimension(880, 506));
+        LOG.setMinimumSize(new java.awt.Dimension(880, 506));
+        LOG.setPreferredSize(new java.awt.Dimension(880, 506));
         LOG.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Contraseña.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        Contraseña.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Contraseña.setText("CONTRASEÑA");
-        LOG.add(Contraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, 200, 70));
-
-        Nombre1.setFont(new java.awt.Font("Stencil", 0, 24)); // NOI18N
-        Nombre1.setForeground(new java.awt.Color(242, 242, 242));
-        Nombre1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Nombre1.setText("MINIPRECIO");
-        LOG.add(Nombre1, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 230, 150, 70));
-
-        Nombre2.setFont(new java.awt.Font("Stencil", 0, 24)); // NOI18N
-        Nombre2.setForeground(new java.awt.Color(242, 242, 242));
-        Nombre2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Nombre2.setText("SURTICONFITES");
-        LOG.add(Nombre2, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 200, 200, 70));
-
-        Nombre_2.setForeground(new java.awt.Color(245, 245, 245));
-        Nombre_2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/WhatsApp Image 2024-08-27 at 9.58.55 PM.jpeg"))); // NOI18N
-        Nombre_2.setText("HOLAAAAAAAAAAAAAAAAAA");
-        LOG.add(Nombre_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, -60, 340, 610));
-
-        CONTRASEÑA.setForeground(new java.awt.Color(204, 204, 204));
-        CONTRASEÑA.setText("*********");
-        CONTRASEÑA.setToolTipText("");
-        CONTRASEÑA.setBorder(null);
-        CONTRASEÑA.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                CONTRASEÑAMousePressed(evt);
-            }
-        });
-        CONTRASEÑA.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CONTRASEÑAActionPerformed(evt);
-            }
-        });
-        LOG.add(CONTRASEÑA, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 360, 400, 30));
-
-        Nombre3.setFont(new java.awt.Font("Stencil", 0, 24)); // NOI18N
-        Nombre3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Nombre3.setText("INICIAR SESION");
-        LOG.add(Nombre3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, 200, 70));
-
-        jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
-        LOG.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 390, 400, 50));
-
-        Usuario1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        Usuario1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Usuario1.setText("USUARIO");
-        Usuario1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                Usuario1MousePressed(evt);
-            }
-        });
-        LOG.add(Usuario1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 170, 200, 70));
-
-        Text_USER.setForeground(new java.awt.Color(204, 204, 204));
-        Text_USER.setText("Username");
-        Text_USER.setBorder(null);
-        Text_USER.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                Text_USERMousePressed(evt);
-            }
-        });
-        Text_USER.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Text_USERActionPerformed(evt);
-            }
-        });
-        LOG.add(Text_USER, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 220, 390, 40));
-
-        jSeparator2.setForeground(new java.awt.Color(0, 0, 0));
-        LOG.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 260, 390, 50));
-
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel2.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+        Barrita.setBackground(new java.awt.Color(204, 204, 204));
+        Barrita.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
-                jPanel2MouseDragged(evt);
+                BarritaMouseDragged(evt);
             }
         });
-        jPanel2.addMouseListener(new java.awt.event.MouseAdapter() {
+        Barrita.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                jPanel2MousePressed(evt);
+                BarritaMousePressed(evt);
             }
         });
 
-        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+        Botonexit.setBackground(new java.awt.Color(204, 204, 204));
 
+        Boton_cerrado.setBackground(new java.awt.Color(204, 204, 204));
         Boton_cerrado.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        Boton_cerrado.setForeground(new java.awt.Color(0, 0, 0));
         Boton_cerrado.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Boton_cerrado.setText("X");
         Boton_cerrado.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -186,43 +126,173 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addComponent(Boton_cerrado, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+        Botoncerrarsesion.setBackground(new java.awt.Color(204, 204, 204));
+        Botoncerrarsesion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Botoncerrarsesion.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BotoncerrarsesionMouseClicked(evt);
+            }
+        });
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel2.setText("CERRAR SESION");
+
+        javax.swing.GroupLayout BotoncerrarsesionLayout = new javax.swing.GroupLayout(Botoncerrarsesion);
+        Botoncerrarsesion.setLayout(BotoncerrarsesionLayout);
+        BotoncerrarsesionLayout.setHorizontalGroup(
+            BotoncerrarsesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BotoncerrarsesionLayout.createSequentialGroup()
+                .addContainerGap(22, Short.MAX_VALUE)
+                .addComponent(jLabel2)
+                .addGap(15, 15, 15))
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(Boton_cerrado, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+        BotoncerrarsesionLayout.setVerticalGroup(
+            BotoncerrarsesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(BotoncerrarsesionLayout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(jLabel2)
+                .addContainerGap(20, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+        javax.swing.GroupLayout BotonexitLayout = new javax.swing.GroupLayout(Botonexit);
+        Botonexit.setLayout(BotonexitLayout);
+        BotonexitLayout.setHorizontalGroup(
+            BotonexitLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BotonexitLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Boton_cerrado, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(Botoncerrarsesion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        BotonexitLayout.setVerticalGroup(
+            BotonexitLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(Boton_cerrado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(BotonexitLayout.createSequentialGroup()
+                .addGap(0, 15, Short.MAX_VALUE)
+                .addComponent(Botoncerrarsesion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        javax.swing.GroupLayout BarritaLayout = new javax.swing.GroupLayout(Barrita);
+        Barrita.setLayout(BarritaLayout);
+        BarritaLayout.setHorizontalGroup(
+            BarritaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(BarritaLayout.createSequentialGroup()
+                .addComponent(Botonexit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 693, Short.MAX_VALUE))
+        );
+        BarritaLayout.setVerticalGroup(
+            BarritaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BarritaLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Botonexit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
-        LOG.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -20, 880, 60));
+        LOG.add(Barrita, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -20, 880, 70));
+
+        Pantalla.setBackground(new java.awt.Color(255, 255, 255));
+        Pantalla.setForeground(new java.awt.Color(255, 255, 255));
+        Pantalla.setMaximumSize(new java.awt.Dimension(880, 470));
+        Pantalla.setMinimumSize(new java.awt.Dimension(880, 470));
+        Pantalla.setPreferredSize(new java.awt.Dimension(880, 470));
+        Pantalla.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        Nombre2.setFont(new java.awt.Font("Stencil", 0, 24)); // NOI18N
+        Nombre2.setForeground(new java.awt.Color(242, 242, 242));
+        Nombre2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Nombre2.setText("SURTICONFITES");
+        Pantalla.add(Nombre2, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 160, 200, 70));
+
+        Nombre1.setFont(new java.awt.Font("Stencil", 0, 24)); // NOI18N
+        Nombre1.setForeground(new java.awt.Color(242, 242, 242));
+        Nombre1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Nombre1.setText("MINIPRECIO");
+        Pantalla.add(Nombre1, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 190, 150, 70));
+
+        Text_USER.setForeground(new java.awt.Color(204, 204, 204));
+        Text_USER.setText("Username");
+        Text_USER.setBorder(null);
+        Text_USER.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                Text_USERMousePressed(evt);
+            }
+        });
+        Text_USER.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Text_USERActionPerformed(evt);
+            }
+        });
+        Pantalla.add(Text_USER, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 150, 390, 40));
+
+        options.setBackground(new java.awt.Color(255, 255, 255));
+        options.setForeground(new java.awt.Color(0, 0, 0));
+        options.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Administrador", "Vendedora", "Bodeguero" }));
+        options.setBorder(null);
+        options.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        options.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                optionsActionPerformed(evt);
+            }
+        });
+        Pantalla.add(options, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 60, -1, -1));
+
+        Nombre_2.setForeground(new java.awt.Color(245, 245, 245));
+        Nombre_2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/WhatsApp Image 2024-08-27 at 9.58.55 PM.jpeg"))); // NOI18N
+        Nombre_2.setText("HOLAAAAAAAAAAAAAAAAAA");
+        Pantalla.add(Nombre_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, -50, 340, 610));
+
+        Nombre3.setFont(new java.awt.Font("Stencil", 0, 24)); // NOI18N
+        Nombre3.setForeground(new java.awt.Color(0, 0, 0));
+        Nombre3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Nombre3.setText("INICIAR SESION");
+        Pantalla.add(Nombre3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, 200, 70));
+
+        Usuario1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        Usuario1.setForeground(new java.awt.Color(0, 0, 0));
+        Usuario1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Usuario1.setText("USUARIO");
+        Usuario1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                Usuario1MousePressed(evt);
+            }
+        });
+        Pantalla.add(Usuario1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 100, 200, 70));
+
+        jSeparator2.setForeground(new java.awt.Color(0, 0, 0));
+        Pantalla.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 190, 390, 50));
+
+        CONTRASEÑA.setForeground(new java.awt.Color(204, 204, 204));
+        CONTRASEÑA.setText("*********");
+        CONTRASEÑA.setToolTipText("");
+        CONTRASEÑA.setBorder(null);
+        CONTRASEÑA.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                CONTRASEÑAMousePressed(evt);
+            }
+        });
+        CONTRASEÑA.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CONTRASEÑAActionPerformed(evt);
+            }
+        });
+        Pantalla.add(CONTRASEÑA, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 280, 400, 40));
+
+        Contraseña.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        Contraseña.setForeground(new java.awt.Color(0, 0, 0));
+        Contraseña.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Contraseña.setText("CONTRASEÑA");
+        Pantalla.add(Contraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, 200, 70));
+
+        jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
+        Pantalla.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 320, 400, 50));
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));
         jPanel1.setToolTipText("");
 
         jLabel1.setFont(new java.awt.Font("Stencil", 0, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("ENTRAR");
         jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -236,30 +306,22 @@ public class Login extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(32, 32, 32)
                 .addComponent(jLabel1)
-                .addGap(33, 33, 33))
+                .addContainerGap(34, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addContainerGap(13, Short.MAX_VALUE)
                 .addComponent(jLabel1)
-                .addGap(10, 10, 10))
+                .addGap(12, 12, 12))
         );
 
-        LOG.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 440, 120, 40));
+        Pantalla.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 370, 120, 40));
 
-        options.setForeground(new java.awt.Color(255, 255, 255));
-        options.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Administrador", "Vendedora", "Bodeguero" }));
-        options.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        options.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                optionsActionPerformed(evt);
-            }
-        });
-        LOG.add(options, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 70, -1, -1));
+        LOG.add(Pantalla, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 880, 480));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -278,18 +340,6 @@ public class Login extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void ShowPanel(JPanel p){
-        
-        p.setSize(800,500);
-       
-                     
-        LOG.removeAll();
-        LOG.revalidate();
-        LOG.repaint();
-        LOG.add(p);
-        LOG.repaint();
-    
-    }
     
     
     
@@ -302,17 +352,17 @@ public class Login extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_CONTRASEÑAActionPerformed
 
-    private void jPanel2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MousePressed
+    private void BarritaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BarritaMousePressed
         Xmouse= evt.getX();
         Ymouse =evt.getY();
                 
-    }//GEN-LAST:event_jPanel2MousePressed
+    }//GEN-LAST:event_BarritaMousePressed
 
-    private void jPanel2MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MouseDragged
+    private void BarritaMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BarritaMouseDragged
         int x= evt.getXOnScreen();
         int y= evt.getYOnScreen();
         this.setLocation(x-Xmouse, y-Ymouse);
-    }//GEN-LAST:event_jPanel2MouseDragged
+    }//GEN-LAST:event_BarritaMouseDragged
 
     private void Boton_cerradoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Boton_cerradoMousePressed
         
@@ -364,78 +414,97 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_optionsActionPerformed
 
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
-             if (options.getSelectedItem().equals("Administrador")){
-                 if ((Text_USER.getText().equals(Admin_user))&&(String.valueOf(CONTRASEÑA.getPassword()).equals(admin_contra)) ){
-                         Admin admi= new Admin();
-                         ShowPanel(admi);
-                 }else{
-                     
-                     if ((Text_USER.getText().equals("Username"))&&(String.valueOf(CONTRASEÑA.getPassword()).equals("*********")) ){
+        String  user = Text_USER.getText();
+        
+        for (Usuario usuario :BaseDeDatos.usuarios ){
+             if ((Text_USER.getText().equals("Username"))&&(String.valueOf(CONTRASEÑA.getPassword()).equals("*********")) ){
                         javax.swing.JOptionPane.showMessageDialog(this,"Porfavor llene los datos");
-                     }else{
-                         javax.swing.JOptionPane.showMessageDialog(this,"El usuario o contraseña utilizados no se encuentran registrados");   
-                     }    
-                 }
-             }
-             if (options.getSelectedItem().equals("Vendedora")){
-                  if ((Text_USER.getText().equals(vend_user))&&(String.valueOf(CONTRASEÑA.getPassword()).equals(vend_contra)) ){
-                     Vend vend= new Vend();
-                     ShowPanel(vend);
-                     
-                 }else{
-                     
-                     if ((Text_USER.getText().equals("Username"))&&(String.valueOf(CONTRASEÑA.getPassword()).equals("*********")) ){
-                        javax.swing.JOptionPane.showMessageDialog(this,"Porfavor llene los datos");
-                     }else{
-                         javax.swing.JOptionPane.showMessageDialog(this,"El usuario o contraseña utilizados no se encuentran registrados");   
-                     }    
-                 }
-             }
-             if (options.getSelectedItem().equals("Bodeguero")){
-                  if ((Text_USER.getText().equals(bode_user))&&(String.valueOf(CONTRASEÑA.getPassword()).equals(bode_contra)) ){
-                     Bode bode= new Bode();
-                     ShowPanel(bode);
-                  
-                     
-                 }else{
-                     
-                     if ((Text_USER.getText().equals("Username"))&&(String.valueOf(CONTRASEÑA.getPassword()).equals("*********")) ){
-                        javax.swing.JOptionPane.showMessageDialog(this,"Porfavor llene los datos");
-                     }else{
-                         javax.swing.JOptionPane.showMessageDialog(this,"El usuario o contraseña utilizados no se encuentran registrados");   
-                     }    
-                 }
-             }
+                        break;
+              }
               
+        
+              if(usuario.getNombreUsuario().equals(user) && usuario.getCargo().equals(options.getSelectedItem()) && usuario.getContraseña().equals(String.valueOf(CONTRASEÑA.getPassword()))){
+                 if (usuario.getCargo().equals("Administrador")){
+                      Admin admi= new Admin();
+                      Barrita.setBackground(new Color(102,102,102)) ;
+                      Botonexit.setBackground(new Color(102,102,102)) ;
+                      Botoncerrarsesion.setBackground(new Color(102,102,102));
+                      Botoncerrarsesion.setEnabled(true);
+                      Botoncerrarsesion.setVisible(true);
+                      Main.ShowPanel(admi , Pantalla , 880, 480);
+                        
+                      break;
+                 }else{
+                     if (usuario.getCargo().equals("Vendedora")){
+                        
+                         Vend vend= new Vend();
+                         Barrita.setBackground(new Color( 0,153,51)) ;
+                         Botonexit.setBackground(new Color( 0,153,51)) ;
+                         Botoncerrarsesion.setBackground(new Color(0,153,51));
+                         Botoncerrarsesion.setEnabled(true);
+                         Botoncerrarsesion.setVisible(true);
+                         Main.ShowPanel(vend, Pantalla, 880, 480);
+                         break;
+                     }else{
+                         
+                        Bode bode= new Bode();
+                        Barrita.setBackground(new Color( 255,153,51)) ;
+                        Botonexit.setBackground(new Color( 255,153,51)) ;
+                        Botoncerrarsesion.setBackground(new Color(255,153,51));
+                        Botoncerrarsesion.setEnabled(true);
+                        Botoncerrarsesion.setVisible(true);
+                        Main.ShowPanel(bode, Pantalla, 880, 480);
+                        break;
+                     }
+                 }
+              
+              }
+        }
+        javax.swing.JOptionPane.showMessageDialog(this,"El usuario o contraseña utilizados no se encuentran registrados");  
     }//GEN-LAST:event_jLabel1MouseClicked
 
+    private void BotoncerrarsesionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotoncerrarsesionMouseClicked
+    Barrita.setBackground(new Color( 204,204,204)) ;
+    Botonexit.setBackground(new Color( 204,204,204)) ;
+    Botoncerrarsesion.setEnabled(false);
+    Botoncerrarsesion.setVisible(false);
+    Text_USER.setForeground(Color.gray);
+    CONTRASEÑA.setForeground(Color.gray);
+    
+    Text_USER.setText("Username");
+    CONTRASEÑA.setText("*********");
+    Pantalla.removeAll();
+    Pantalla.setLayout(null); // Desactiva el layout manager
+    Pantalla.add(jSeparator1);
+    Pantalla.add(CONTRASEÑA);
+    Pantalla.add(Contraseña);
+    Pantalla.add(Nombre1);
+    Pantalla.add(Nombre2);
+    Pantalla.add(Nombre3);
+    Pantalla.add(Nombre_2);
+    Pantalla.add(Text_USER);
+    Pantalla.add(Usuario1);
+    Pantalla.add(options);
+    Pantalla.add(jPanel1,jLabel1);
+    Pantalla.add(jSeparator2);
+    // Actualizar el panel
+    Pantalla.revalidate();
+    Pantalla.repaint();
+    
+        
+    }//GEN-LAST:event_BotoncerrarsesionMouseClicked
+    
+  
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
+        
+       
+        
+        
+      
+            
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -445,7 +514,10 @@ public class Login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel Barrita;
     private javax.swing.JLabel Boton_cerrado;
+    private javax.swing.JPanel Botoncerrarsesion;
+    private javax.swing.JPanel Botonexit;
     private javax.swing.JPasswordField CONTRASEÑA;
     private javax.swing.JLabel Contraseña;
     private javax.swing.JPanel LOG;
@@ -453,12 +525,12 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel Nombre2;
     private javax.swing.JLabel Nombre3;
     private javax.swing.JLabel Nombre_2;
+    private javax.swing.JPanel Pantalla;
     private javax.swing.JTextField Text_USER;
     private javax.swing.JLabel Usuario1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JComboBox<String> options;

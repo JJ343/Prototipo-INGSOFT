@@ -8,12 +8,12 @@ package login;
  *
  * @author santi
  */
-public class Registro extends javax.swing.JPanel {
+public class IngresarCliente extends javax.swing.JPanel {
 
     /**
      * Creates new form Principal
      */
-    public Registro() {
+    public IngresarCliente() {
         initComponents();
     }
 
@@ -43,13 +43,18 @@ public class Registro extends javax.swing.JPanel {
         Text_USER6 = new javax.swing.JTextField();
         jSeparator7 = new javax.swing.JSeparator();
 
+        setBackground(new java.awt.Color(255, 255, 255));
+        setForeground(new java.awt.Color(255, 255, 255));
+
         jPanel12.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel10.setFont(new java.awt.Font("Stencil", 0, 24)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(0, 0, 0));
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel10.setText("Registrar Cliente");
 
         jLabel11.setFont(new java.awt.Font("Ebrima", 1, 18)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(0, 0, 0));
         jLabel11.setText("Nombre completo:");
 
         Text_USER4.setForeground(new java.awt.Color(204, 204, 204));
@@ -67,6 +72,7 @@ public class Registro extends javax.swing.JPanel {
         });
 
         jLabel18.setFont(new java.awt.Font("Ebrima", 1, 18)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(0, 0, 0));
         jLabel18.setText("Cédula cliente:");
 
         Text_USER5.setForeground(new java.awt.Color(204, 204, 204));
@@ -89,6 +95,7 @@ public class Registro extends javax.swing.JPanel {
         jPanel3.setToolTipText("");
 
         jLabel19.setFont(new java.awt.Font("Stencil", 0, 14)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(0, 0, 0));
         jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel19.setText("Registrar");
         jLabel19.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -118,6 +125,7 @@ public class Registro extends javax.swing.JPanel {
         jSeparator6.setForeground(new java.awt.Color(0, 0, 0));
 
         jLabel20.setFont(new java.awt.Font("Ebrima", 1, 18)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(0, 0, 0));
         jLabel20.setText("Dirección");
 
         Text_USER7.setForeground(new java.awt.Color(204, 204, 204));
@@ -137,6 +145,7 @@ public class Registro extends javax.swing.JPanel {
         jSeparator8.setForeground(new java.awt.Color(0, 0, 0));
 
         jLabel12.setFont(new java.awt.Font("Ebrima", 1, 18)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(0, 0, 0));
         jLabel12.setText("Número telefónico:");
 
         Text_USER6.setForeground(new java.awt.Color(204, 204, 204));
@@ -252,14 +261,7 @@ public class Registro extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void Text_USER4MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Text_USER4MousePressed
-        if (Text_USER.getText().equals("Username")){
-            Text_USER.setText("");
-            Text_USER.setForeground(Color.black);
-        }
-        if (String.valueOf(CONTRASEÑA.getPassword()).isEmpty()    ){
-            CONTRASEÑA.setText("*********");
-            CONTRASEÑA.setForeground(Color.gray);
-        }
+     
     }//GEN-LAST:event_Text_USER4MousePressed
 
     private void Text_USER4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Text_USER4ActionPerformed
@@ -275,47 +277,7 @@ public class Registro extends javax.swing.JPanel {
     }//GEN-LAST:event_Text_USER5ActionPerformed
 
     private void jLabel19MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel19MouseClicked
-        if (options.getSelectedItem().equals("Administrador")){
-            if ((Text_USER.getText().equals(Admin_user))&&(String.valueOf(CONTRASEÑA.getPassword()).equals(admin_contra)) ){
-                Admin admi= new Admin();
-                ShowPanel(admi);
-            }else{
-
-                if ((Text_USER.getText().equals("Username"))&&(String.valueOf(CONTRASEÑA.getPassword()).equals("*********")) ){
-                    javax.swing.JOptionPane.showMessageDialog(this,"Porfavor llene los datos");
-                }else{
-                    javax.swing.JOptionPane.showMessageDialog(this,"El usuario o contraseña utilizados no se encuentran registrados");
-                }
-            }
-        }
-        if (options.getSelectedItem().equals("Vendedora")){
-            if ((Text_USER.getText().equals(vend_user))&&(String.valueOf(CONTRASEÑA.getPassword()).equals(vend_contra)) ){
-                Vend vend= new Vend();
-                ShowPanel(vend);
-
-            }else{
-
-                if ((Text_USER.getText().equals("Username"))&&(String.valueOf(CONTRASEÑA.getPassword()).equals("*********")) ){
-                    javax.swing.JOptionPane.showMessageDialog(this,"Porfavor llene los datos");
-                }else{
-                    javax.swing.JOptionPane.showMessageDialog(this,"El usuario o contraseña utilizados no se encuentran registrados");
-                }
-            }
-        }
-        if (options.getSelectedItem().equals("Bodeguero")){
-            if ((Text_USER.getText().equals(bode_user))&&(String.valueOf(CONTRASEÑA.getPassword()).equals(bode_contra)) ){
-                Bode bode= new Bode();
-                ShowPanel(bode);
-
-            }else{
-
-                if ((Text_USER.getText().equals("Username"))&&(String.valueOf(CONTRASEÑA.getPassword()).equals("*********")) ){
-                    javax.swing.JOptionPane.showMessageDialog(this,"Porfavor llene los datos");
-                }else{
-                    javax.swing.JOptionPane.showMessageDialog(this,"El usuario o contraseña utilizados no se encuentran registrados");
-                }
-            }
-        }
+        
     }//GEN-LAST:event_jLabel19MouseClicked
 
     private void Text_USER7MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Text_USER7MousePressed

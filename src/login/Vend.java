@@ -31,10 +31,6 @@ public class Vend extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        Vend = new javax.swing.JPanel();
-        jPanel5 = new javax.swing.JPanel();
-        jPanel6 = new javax.swing.JPanel();
-        Boton_cerrado1 = new javax.swing.JLabel();
         jPanel7 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
@@ -53,83 +49,12 @@ public class Vend extends javax.swing.JPanel {
         jPanel12 = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jPanel10 = new javax.swing.JPanel();
+        Pantalla = new javax.swing.JPanel();
 
+        setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Vend.setBackground(new java.awt.Color(255, 255, 255));
-        Vend.setMaximumSize(new java.awt.Dimension(800, 500));
-        Vend.setMinimumSize(new java.awt.Dimension(800, 500));
-        Vend.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jPanel5.setBackground(new java.awt.Color(102, 255, 255));
-        jPanel5.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseDragged(java.awt.event.MouseEvent evt) {
-                jPanel5MouseDragged(evt);
-            }
-        });
-        jPanel5.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                jPanel5MousePressed(evt);
-            }
-        });
-
-        jPanel6.setBackground(new java.awt.Color(102, 255, 255));
-
-        Boton_cerrado1.setBackground(new java.awt.Color(0, 0, 0));
-        Boton_cerrado1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        Boton_cerrado1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Boton_cerrado1.setText("X");
-        Boton_cerrado1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        Boton_cerrado1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                Boton_cerrado1MouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                Boton_cerrado1MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                Boton_cerrado1MouseExited(evt);
-            }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                Boton_cerrado1MousePressed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addComponent(Boton_cerrado1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(Boton_cerrado1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-
-        Vend.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -20, 880, 60));
-
-        jPanel7.setBackground(new java.awt.Color(102, 255, 255));
+        jPanel7.setBackground(new java.awt.Color(0, 153, 51));
 
         jPanel4.setBackground(new java.awt.Color(102, 255, 102));
         jPanel4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -176,6 +101,7 @@ public class Vend extends javax.swing.JPanel {
         );
 
         jLabel2.setFont(new java.awt.Font("Stencil", 0, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Vendedora");
 
@@ -184,6 +110,9 @@ public class Vend extends javax.swing.JPanel {
         jPanel9.setBackground(new java.awt.Color(102, 255, 102));
         jPanel9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel9MouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jPanel9MouseEntered(evt);
             }
@@ -221,6 +150,9 @@ public class Vend extends javax.swing.JPanel {
         jPanel8.setBackground(new java.awt.Color(102, 255, 102));
         jPanel8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel8MouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jPanel8MouseEntered(evt);
             }
@@ -250,7 +182,7 @@ public class Vend extends javax.swing.JPanel {
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(12, Short.MAX_VALUE)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel9)
                     .addComponent(jLabel13))
@@ -346,22 +278,22 @@ public class Vend extends javax.swing.JPanel {
                     .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(67, 67, 67))
+                .addGap(72, 72, 72))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
-                .addGap(38, 38, 38)
+                .addGap(32, 32, 32)
                 .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 5, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
-                .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
+                .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(16, 16, 16)
                 .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(28, 28, 28)
                 .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -370,51 +302,23 @@ public class Vend extends javax.swing.JPanel {
                 .addContainerGap(145, Short.MAX_VALUE))
         );
 
-        Vend.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 0, 260, 500));
+        add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 0, 260, 500));
 
-        jPanel10.setBackground(new java.awt.Color(255, 255, 255));
+        Pantalla.setBackground(new java.awt.Color(255, 255, 255));
 
-        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
-        jPanel10.setLayout(jPanel10Layout);
-        jPanel10Layout.setHorizontalGroup(
-            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout PantallaLayout = new javax.swing.GroupLayout(Pantalla);
+        Pantalla.setLayout(PantallaLayout);
+        PantallaLayout.setHorizontalGroup(
+            PantallaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 660, Short.MAX_VALUE)
         );
-        jPanel10Layout.setVerticalGroup(
-            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 460, Short.MAX_VALUE)
+        PantallaLayout.setVerticalGroup(
+            PantallaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 480, Short.MAX_VALUE)
         );
 
-        Vend.add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 40, 660, 460));
-
-        add(Vend, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        add(Pantalla, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 0, 660, 480));
     }// </editor-fold>//GEN-END:initComponents
-
-    private void Boton_cerrado1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Boton_cerrado1MouseClicked
-        System.exit(0);
-    }//GEN-LAST:event_Boton_cerrado1MouseClicked
-
-    private void Boton_cerrado1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Boton_cerrado1MouseEntered
-        
-    }//GEN-LAST:event_Boton_cerrado1MouseEntered
-
-    private void Boton_cerrado1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Boton_cerrado1MouseExited
-               // TODO add your handling code here:
-    }//GEN-LAST:event_Boton_cerrado1MouseExited
-
-    private void Boton_cerrado1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Boton_cerrado1MousePressed
-
-    }//GEN-LAST:event_Boton_cerrado1MousePressed
-
-    private void jPanel5MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel5MouseDragged
-        int x= evt.getXOnScreen();
-        int y= evt.getYOnScreen();
-        
-    }//GEN-LAST:event_jPanel5MouseDragged
-
-    private void jPanel5MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel5MousePressed
-        
-    }//GEN-LAST:event_jPanel5MousePressed
 
     private void jPanel4MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel4MouseDragged
 
@@ -463,11 +367,22 @@ public class Vend extends javax.swing.JPanel {
     private void jPanel12MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel12MouseExited
         jPanel12.setBackground(new Color(102,255,102));
     }//GEN-LAST:event_jPanel12MouseExited
+
+    private void jPanel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel8MouseClicked
+      IngresarCliente ing = new IngresarCliente();
+      Main.ShowPanel(ing, Pantalla, 680, 880);
+        
+        
+    }//GEN-LAST:event_jPanel8MouseClicked
+
+    private void jPanel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel9MouseClicked
+        IngresarPedido ped =new IngresarPedido();
+        Main.ShowPanel(ped, Pantalla, 680, 880);
+    }//GEN-LAST:event_jPanel9MouseClicked
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel Boton_cerrado1;
-    private javax.swing.JPanel Vend;
+    private javax.swing.JPanel Pantalla;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -479,12 +394,9 @@ public class Vend extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
