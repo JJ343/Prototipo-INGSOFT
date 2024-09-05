@@ -1,0 +1,7 @@
+admin,123,Administrador
+bode,123,Bodeguero
+vend,123,Vendedora
+firu,123,Administrador
+
+
+

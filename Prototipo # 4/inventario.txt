@@ -1,0 +1,2 @@
+Producto A,100
+Full name,328
