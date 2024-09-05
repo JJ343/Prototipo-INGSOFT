@@ -70,24 +70,18 @@ public class Añadir_usuarios extends javax.swing.JPanel {
         });
 
         jLabel2.setFont(new java.awt.Font("Stencil", 0, 24)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Registro de usuarios");
 
         jLabel3.setFont(new java.awt.Font("Ebrima", 1, 12)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("NOMBRE:");
 
         jLabel4.setFont(new java.awt.Font("Ebrima", 1, 12)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("CONTRASEÑA:");
 
         jLabel5.setFont(new java.awt.Font("Ebrima", 1, 12)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("TIPO:");
 
-        options.setBackground(new java.awt.Color(255, 255, 255));
-        options.setForeground(new java.awt.Color(0, 0, 0));
         options.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Administrador", "Vendedora", "Bodeguero" }));
         options.setBorder(null);
         options.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -106,7 +100,6 @@ public class Añadir_usuarios extends javax.swing.JPanel {
         });
 
         jLabel6.setFont(new java.awt.Font("Ebrima", 1, 12)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setText("Añadir");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -135,7 +128,6 @@ public class Añadir_usuarios extends javax.swing.JPanel {
         });
 
         jLabel7.setFont(new java.awt.Font("Ebrima", 1, 12)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setText("Limpiar");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);

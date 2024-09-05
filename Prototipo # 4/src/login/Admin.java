@@ -175,6 +175,11 @@ public class Admin extends javax.swing.JPanel {
 
         jLabel11.setFont(new java.awt.Font("Ebrima", 1, 12)); // NOI18N
         jLabel11.setText("Lista de clientes");
+        jLabel11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel11MouseClicked(evt);
+            }
+        });
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/2285516.png"))); // NOI18N
 
@@ -322,6 +327,7 @@ public class Admin extends javax.swing.JPanel {
         add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 0, 260, 590));
     }// </editor-fold>//GEN-END:initComponents
 
+    
     private void jPanel4MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel4MouseDragged
         
     }//GEN-LAST:event_jPanel4MouseDragged
@@ -374,6 +380,12 @@ public class Admin extends javax.swing.JPanel {
         Añadir_usuarios user = new Añadir_usuarios();
         Main.ShowPanel(user, Pantalla, 660, 480);
     }//GEN-LAST:event_jPanel13MouseClicked
+
+    private void jLabel11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseClicked
+        ListaClientes listclien = new ListaClientes();
+        Pantalla.removeAll();
+        Pantalla.add(listclien);
+    }//GEN-LAST:event_jLabel11MouseClicked
     
     
     
